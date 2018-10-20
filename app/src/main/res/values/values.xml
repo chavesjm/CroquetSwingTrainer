@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="provider_array">
+        <item>Improved Orientation Sensor 1</item>
+        <item>Improved Orientation Sensor 2</item>
+        <item>Android Rotation Vector</item>
+        <item>Calibrated Gyroscope</item>
+        <item>Gravity and Compass</item>
+        <item>Accelerometer and Compass</item>
+    </string-array>
+</resources>

@@ -1,0 +1,14 @@
+    <resources>
+    <string name="app_name">Croquet Swing Trainer</string>
+    <string name="publi">Get your Croquet Swing Trainer device. Visit us for more information.</string>
+    <string name="web">www.mazosdecroquet.es</string>
+    <string name="des">Disconnected</string>
+    <string name="con">Connected</string>
+    <string name="connecting">Connecting...</string>
+    <string name="onlinemode">Online Mode</string>
+    <string name="offllinemode">Offline Mode</string>
+    <string name="searchdeviceadvert">If your \"Trainer\" device is not appear in this list, you should synchronice it with your mobile. Review you bluetooth settings.</string>
+    <string name="errordevice">Your bluetooth adapter is not compatible with this version</string>
+    <string name="bluetoothdisconnected">This application needs the bluetooth device. You should enable it.</string>
+    <string name="notdeviceselected">A Bluetooth Trainer device selected is necessary. You should select one.</string>
+</resources>

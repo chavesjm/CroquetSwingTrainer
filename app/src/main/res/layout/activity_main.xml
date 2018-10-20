@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.software.chavesjm.croquetswingtrainer.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo"
+        android:background="@color/colorPrimaryLow" />
+
+    <LinearLayout
+        android:id="@+id/ErrorMonitoring"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ErrorControl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton">
+
+        <ProgressBar
+            android:id="@+id/errorLeft"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="118dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:max="10"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progress_drawable_inverter"
+            android:rotation="180" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/initialPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0º"
+                android:textColor="@color/colorNegro"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/errorMeasure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0º"
+                android:textColor="@color/colorNegro"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/errorRigth"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="118dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:max="10"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progress_drawable"
+            android:rotation="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ErrorControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/Publicity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/mTextError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="TextView"
+            android:textColor="@color/colorNegro"
+            android:textSize="24sp" />
+
+        <SeekBar
+            android:id="@+id/difficult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="5"
+            android:progressDrawable="@drawable/custom_progress"
+            android:scaleType="fitXY"
+            android:thumb="@drawable/thumb" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/start" />
+
+    <LinearLayout
+        android:id="@+id/Publicity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/publi"
+            android:textColor="@color/colorNegro"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/web" />
+
+        <TextView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autoLink="web"
+            android:gravity="center"
+            android:text="@string/web"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DebugInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textViewW1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewX1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewY1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewZ1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewRoll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewPitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewYaw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/textViewIP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0.0.0" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
